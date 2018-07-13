@@ -16,10 +16,16 @@ class Question extends React.Component {
         <p>Question: {decodeURIComponent(this.props.question.question)}</p>
         <h2>And the answer is...</h2>
         <button onClick={() => this.props.handleIncorrectAnswer()}>
-          {this.props.question.incorrect_answers[0]}
+          {decodeURIComponent(this.props.question.incorrect_answers[0])}
+        </button>
+        <button onClick={() => this.props.handleIncorrectAnswer()}>
+          {decodeURIComponent(this.props.question.incorrect_answers[1])}
+        </button>
+        <button onClick={() => this.props.handleIncorrectAnswer()}>
+          {decodeURIComponent(this.props.question.incorrect_answers[2])}
         </button>
         <button onClick={() => this.props.handleCorrectAnswer()}>
-          {this.props.question.correct_answer}
+          {decodeURIComponent(this.props.question.correct_answer)}
         </button>
 
         <h2>Your score: {this.props.score}</h2>

@@ -19,10 +19,9 @@ export function decrementCount() {
 
 export function fetchQuestion() {
   return function(dispatch, getState) {
-    fetch("https://opentdb.com/api.php?amount=1&type=boolean&encode=url3986")
+    fetch("https://opentdb.com/api.php?amount=1&type=multiple&encode=url3986")
       .then(response => response.json())
       .then(json => {
-        console.log(json.results[0]);
         dispatch(question(json.results[0]));
       });
   };
