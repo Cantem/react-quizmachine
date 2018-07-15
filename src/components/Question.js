@@ -19,13 +19,20 @@ class Question extends React.Component {
         </header>
         <div className="app-item">
           <div className="app-item-title">
-            <h2 className="">The question is...</h2>
+            <h3 className="app-item-title_field">The question is...</h3>
             <p>Category: {decodeURIComponent(this.props.question.category)}</p>
             <p>Difficulty: {this.props.question.difficulty}</p>
-            <p>Question: {decodeURIComponent(this.props.question.question)}</p>
-            <h2 className="">And the answer is...</h2>
+            <p className="app-item-title_field_paragraph">
+              {decodeURIComponent(this.props.question.question)}
+            </p>
+            <h3 className="app-item-title_field">And the answer is...</h3>
           </div>
-          <div className="app-item-title">?</div>
+          <div className="app-item-title">
+            <img
+              className="app-item-title_field"
+              src="./static/question.jpeg"
+            />
+          </div>
           <div className="button">
             <button
               className="submitbtn"
@@ -52,7 +59,7 @@ class Question extends React.Component {
               {decodeURIComponent(this.props.question.incorrect_answers[2])}
             </button>
           </div>
-          <h2 className="">Your score: {this.props.score}</h2>
+          <h2 className="app-item-score">Your score: {this.props.score}</h2>
         </div>
       </div>
     );

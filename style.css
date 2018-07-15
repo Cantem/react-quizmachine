@@ -1,19 +1,3 @@
-.voting-button {
-  color: #550527;
-  font-size: 24px;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 5px;
-  background-color: white;
-  border: 2px solid #550527;
-}
-
-.voting-button--selected {
-  color: #fff;
-  background-color: #550527;
-  border: 2px solid white;
-}
-
 * {
   box-sizing: inherit;
 }
@@ -55,6 +39,7 @@ body {
 .app-item {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
 
   width: 100%;
   margin-bottom: 20px;
@@ -65,16 +50,31 @@ body {
   box-shadow: 0 2px 6px 0;
 }
 
-.app-item-title {
-  justify-self: center;
+.app-item-score {
+  margin-left: 10px:
+}
 
+.app-item-title {
   background-color: #fff;
   margin-bottom: 20px;
   width: 100%;
+  padding: 10px;
 
   border-radius: 5px;
   border: 0;
   box-shadow: 0 2px 6px 0;
+
+  text-transform: capitalize;
+}
+
+.app-item-title_field {
+  color: rgba(110, 216, 17, 0.906);
+  justify-content: center;
+}
+
+.app-item-title_field_paragraph {
+  font-weight: bold;
+  font-style: italic;
 }
 
 .button {
@@ -82,6 +82,7 @@ body {
   grid-template-columns: repeat(4, 2fr);
   grid-gap: 10px;
 
+  width: 50%;
   margin: 10px 10px 10px 10px;
 }
 
@@ -137,3 +138,14 @@ body {
   position: relative;
   top: 1px;
 }
+
+/* @media screen and (min-width: 500px){
+  .button {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    grid-gap: 10px;
+  
+    width: 50%;
+    margin: 10px 10px 10px 10px;
+  }
+} */
