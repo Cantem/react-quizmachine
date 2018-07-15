@@ -8,6 +8,7 @@ class Question extends React.Component {
   render() {
     console.log(this.props.question);
     if (!this.props.question.category) return null;
+
     return (
       <div>
         <h2>The question is...</h2>
@@ -21,11 +22,11 @@ class Question extends React.Component {
         <button onClick={() => this.props.handleIncorrectAnswer()}>
           {decodeURIComponent(this.props.question.incorrect_answers[1])}
         </button>
-        <button onClick={() => this.props.handleIncorrectAnswer()}>
-          {decodeURIComponent(this.props.question.incorrect_answers[2])}
-        </button>
         <button onClick={() => this.props.handleCorrectAnswer()}>
           {decodeURIComponent(this.props.question.correct_answer)}
+        </button>
+        <button onClick={() => this.props.handleIncorrectAnswer()}>
+          {decodeURIComponent(this.props.question.incorrect_answers[2])}
         </button>
 
         <h2>Your score: {this.props.score}</h2>

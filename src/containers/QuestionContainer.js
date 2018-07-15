@@ -5,7 +5,8 @@ import { fetchQuestion, incrementCount, decrementCount } from "../actions";
 const mapStateToProps = state => {
   return {
     question: state.question.question,
-    score: state.question.score
+    score: state.question.score,
+    message: state.message
   };
 };
 
@@ -16,7 +17,9 @@ const mapDispatchToProps = dispatch => {
       dispatch(incrementCount());
       dispatch(fetchQuestion());
     },
-    handleIncorrectAnswer: () => dispatch(decrementCount())
+    handleIncorrectAnswer: () => {
+      dispatch(decrementCount());
+    }
   };
 };
 
